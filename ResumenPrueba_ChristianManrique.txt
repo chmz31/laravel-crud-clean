@@ -1,0 +1,42 @@
+Funcionalidades implementadas con éxito: 
+
+>> Frontend con HTML/CSS/JS  
+ >Maquetación completa con diseño responsive lo más fiel posible al ejemplo, haciendo uso de Bootstrap y las fuentes      proporcionadas 
+>> Funciones de la API en Laravel 
+ > Se han implementado con éxito las 10 funciones + 1 adicional para mi comodidad haciendo la página en Laravel, están incluidas en la colección Postman y se repasaron en el vídeo explicativo. 
+
+Funcionalidades pendientes o como placeholder: 
+
+Si bien se han implementado en el backend las 10 funciones que requería el ejercicio, ciñéndome al workflow descrito en el
+diagrama de funcionamiento de la APP ha quedado como placeholder en la web real el sistema de búsqueda y el sistema de pedidos y login, si bien se podría implementar por un tema de tiempo y como no estaba solicitado explícitamente en este diagrama he decido dejarlo como template/placeholder… eso si, recalco que las funciones están implementadas y fueron vistas en el vídeo explicativo + subidas en la postman collection…. 
+
+Encontrarán en el zip la carpeta pruebaAbalitApi, el proyecto sigue las rutas propias de un proyecto Laravel donde podrán encontrar controladores en: 
+
+App/Http/Controllers 
+
+Modelos en: 
+
+App/Models
+
+Migraciones y Seeders en: 
+
+database/migrations 
+
+database/seeders 
+
+las rutas de la API en 
+
+routes/api.php
+
+
+y por último todo lo relacionado a la página y frontend en la carpeta homónima...
+
+
+
+
+
+Por último, agradezco al personal de Abalit por dejarme realizar esta prueba, si bien no soy el estudiante con más experiencia en PHP, Laravel, o HTML/CSS/JS ya la prepararme para la prueba y su posterior desarrollo después de las 3 horas en presencial han sido una experiencia que me ha empujado a tener que probar nuevas tecnologías no vistas en clase y forzarme a tratar de aprenderlas o al menos entenderlas lo suficiente para buscarme la vida para la prueba, ha sido un gusto! 
+
+Saludos! 
+
+Christian M. 
