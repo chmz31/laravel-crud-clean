@@ -1,61 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛠️ Laravel CRUD API – Clean Architecture
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto es una **API RESTful construida con Laravel 10**, diseñada como prueba técnica para una empresa de desarrollo. Incluye gestión completa de productos, categorías y subcategorías, con una base de datos semilla, rutas protegidas por métodos HTTP y un frontend simple en HTML/JS para pruebas rápidas.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Funcionalidades principales
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- CRUD completo para productos
+- CRUD completo para categorías con sistema de subcategorías
+- Seeders para datos de prueba (productos y categorías)
+- Relación one-to-many (categorías -> productos)
+- Diseño limpio y estructurado (MVC)
+- API RESTful estandarizada
+- Frontend básico para testeo con `localStorage` (sin login)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🧰 Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend**: PHP · Laravel 10
+- **Base de datos**: MySQL · SQLite (modo testing)
+- **Frontend**: HTML · CSS · JavaScript (sin frameworks)
+- **Dev Tools**: Composer · XAMPP · Git Bash · Postman
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🧪 Endpoints de la API
 
-## Laravel Sponsors
+| Método | Ruta                       | Acción                             |
+|--------|----------------------------|------------------------------------|
+| GET    | `/api/products`            | Listar todos los productos         |
+| POST   | `/api/products`            | Crear un nuevo producto            |
+| GET    | `/api/products/{id}`       | Ver detalle de un producto         |
+| PUT    | `/api/products/{id}`       | Editar un producto existente       |
+| DELETE | `/api/products/{id}`       | Eliminar un producto               |
+| GET    | `/api/categories`          | Listar todas las categorías        |
+| POST   | `/api/categories`          | Crear categoría o subcategoría     |
+| ...    | *(más rutas por implementar)* |                                    |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+> Puedes testear la API con Postman, Insomnia o el mini frontend incluido.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## 💻 Instalación local
 
-## Contributing
+1. Clona el proyecto  
+git clone https://github.com/chmz31/laravel-crud-clean.git
+cd laravel-crud-clean
+2. Instala dependencias
+composer install
+3. Copia y configura el archivo .env
+cp .env.example .env
+php artisan key:generate
+4.Configura tu base de datos en .env
+5. Ejecuta migraciones y seeders
+php artisan migrate --seed
+6. Lanza el servidor
+php artisan serve
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+📷 Mini Frontend
+El proyecto incluye un frontend básico en /resources/views/index.html y /product.html para probar las rutas y la funcionalidad con localStorage.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+🧠 Cosas que me gustaría mejorar
+Añadir autenticación con Sanctum o Passport
 
-## Security Vulnerabilities
+Validación más avanzada con Form Requests
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Panel de administración real
 
-## License
+Frontend en Vue o React 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+🙋 Sobre mí
+Soy Christian, técnico en desarrollo de aplicaciones multiplataforma. Actualmente me encuentro haciendo prácticas y ampliando mi experiencia como desarrollador.
+📫 Puedes encontrarme en LinkedIn o visitar mi GitHub para ver más proyectos.
